@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
-import { Download, EyeOff, FileCheck, Images, LockKeyhole, ScanLine, ChevronDown, X, Play, Pause, RotateCcw, Flame } from 'lucide-react';
+import { Download, EyeOff, FileCheck, Images, LockKeyhole, ScanLine, ChevronDown, X, Play, Pause, RotateCcw, Flame, Maximize2 } from 'lucide-react';
 import { booleanWithin } from '@turf/turf';
 import { Pilot, Sample, EvidenceLabel, agreement, validateReview } from './evidence';
 import { download, csv } from './data';
@@ -9,6 +9,9 @@ import { getForestName, getRegionName } from './reserves-i18n';
 interface Props {
   pilot: Pilot;
   sample: Sample | undefined;
+  forestSamples: Sample[];
+  periodSamples: Sample[];
+  periodLabel: string;
   selectedForestId?: string;
   lang?: string;
   t: (key: string) => string;
@@ -21,11 +24,20 @@ function Burn3DDroneView({
   center,
   burnPolygon,
   caption,
+  lang,
 }: {
   center: [number, number];
   burnPolygon: any;
   caption: string;
+  lang: string;
 }) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const expandRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const restoreFocus = useRef(false);
+  const [enlarged, setEnlarged] = useState(false);
+  const expandLabel = lang === 'mm' ? '3D မြင်ကွင်း ချဲ့ရန်' : 'Expand 3D view';
+  const closeLabel = lang === 'mm' ? '3D မြင်ကွင်း ပိတ်ရန်' : 'Close expanded 3D view';
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const rafRef = useRef<number | null>(null);
@@ -99,8 +111,25 @@ function Burn3DDroneView({
     };
   }, [center[0], center[1], burnPolygon]);
 
+  useEffect(() => {
+    mapRef.current?.resize();
+    if (enlarged && dialogRef.current?.open) closeRef.current?.focus();
+    if (!enlarged && dialogRef.current && !dialogRef.current.open && restoreFocus.current) {
+      restoreFocus.current = false;
+      expandRef.current?.focus();
+    }
+  }, [enlarged]);
+
   return (
-    <div className="drone-3d-card">
+    <dialog
+      ref={dialogRef}
+      className="drone-3d-card"
+      aria-label={caption}
+      onClose={() => {
+        setEnlarged(false);
+        restoreFocus.current = true;
+      }}
+    >
       <div ref={containerRef} className="drone-3d-canvas" aria-label="3D Drone Burn Area View" />
       <span className="drone-3d-badge">3D DRONE LOOP</span>
       <div className="drone-3d-controls">
@@ -118,13 +147,38 @@ function Burn3DDroneView({
         >
           <RotateCcw size={13} />
         </button>
+        {enlarged ? (
+          <button
+            ref={closeRef}
+            type="button"
+            title={closeLabel}
+            aria-label={closeLabel}
+            onClick={() => dialogRef.current?.close()}
+          >
+            <X size={16} aria-hidden="true" />
+          </button>
+        ) : (
+          <button
+            ref={expandRef}
+            type="button"
+            title={expandLabel}
+            aria-label={expandLabel}
+            aria-haspopup="dialog"
+            onClick={() => {
+              dialogRef.current?.showModal();
+              setEnlarged(true);
+            }}
+          >
+            <Maximize2 size={16} aria-hidden="true" />
+          </button>
+        )}
       </div>
       <div className="drone-3d-caption">{caption}</div>
-    </div>
+    </dialog>
   );
 }
 
-export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t, onSelect, onReview, onClose }: Props) {
+export function EvidencePanel({ pilot, sample, forestSamples, periodSamples, periodLabel, selectedForestId, lang = 'en', t, onSelect, onReview, onClose }: Props) {
   const [position, setPosition] = useState(50);
   const [imageMode, setImageMode] = useState('compare');
   const [reviewer, setReviewer] = useState('');
@@ -139,21 +193,10 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
   const [crosscheck, setCrosscheck] = useState<any>(null);
   const touchStart = useRef(0);
 
-  // Filter to 5 burn evidences for Bago Yoma Region, or 2 best burn evidences per Reserved Forest (25 total)
-  const visibleSamples = useMemo(() => {
-    const all = pilot.samples || [];
-    if (selectedForestId && selectedForestId !== 'all') {
-      const subset = all.filter((s: any) => s.forest_id === selectedForestId);
-      const limit = selectedForestId === 'bago_yoma' ? 5 : 2;
-      return subset.length ? subset.slice(0, limit) : all;
-    }
-    return all;
-  }, [pilot.samples, selectedForestId]);
-
-  const activeSample: any =
-    sample && visibleSamples.some((s) => s.sample_id === sample.sample_id) ? sample : visibleSamples[0];
+  const activeSample: any = sample;
 
   useEffect(() => {
+    setPosition(50);
     setReviewer(activeSample?.reviewer || '');
     setReason(activeSample?.locked ? activeSample.reason : '');
     setLabel(activeSample?.label || 'unknown');
@@ -171,7 +214,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
     }
   }, [activeSample?.sample_id, activeSample?.locked]);
 
-  const result = agreement(visibleSamples);
+  const result = agreement(forestSamples);
   const score = (value: number | null) => (value == null ? '—' : (value * 100).toFixed(1) + '%');
 
   const save = () => {
@@ -214,7 +257,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
     download(
       'myanmar-forestwatch-reviews.json',
       JSON.stringify(
-        visibleSamples
+        forestSamples
           .filter((s) => s.locked)
           .map((s: any) => ({
             sample_id: s.sample_id,
@@ -234,7 +277,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
     download(
       'myanmar-forestwatch-validation.csv',
       csv(
-        visibleSamples.map((s: any) => ({
+        forestSamples.map((s: any) => ({
           sample_id: s.sample_id,
           forest_name: s.forest_name,
           region: s.region_en,
@@ -256,7 +299,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
       JSON.stringify(
         {
           type: 'FeatureCollection',
-          features: visibleSamples
+          features: forestSamples
             .filter((s: any) => s.polygon)
             .map((s: any) => ({
               type: 'Feature',
@@ -310,29 +353,36 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
       {!expanded && activeSample && <p className="collapsed-selection">{simpleCaption}</p>}
 
       <div className="evidence-scroll">
-        <label className="field-label">
-          {lang === 'mm' ? `မီးလောင်မှု အထောက်အထား (${visibleSamples.length} ခု)` : `Burnt Evidence (${visibleSamples.length} curated)`}
-          <select
-            value={activeSample?.sample_id || ''}
-            onChange={(e) => {
-              const found = visibleSamples.find((s) => s.sample_id === e.target.value);
-              if (found) onSelect(found);
-            }}
-          >
-            <option value="" disabled>
-              {t('noSample')}
-            </option>
-            {visibleSamples.map((s: any) => (
-              <option value={s.sample_id} key={s.sample_id}>
-                {getForestName(s, lang)} · {s.date_label || s.period} ({s.burned_area_ha} {lang === 'mm' ? 'ဟက်တာ' : 'ha'})
+        {periodSamples.length === 0 ? (
+          <div className="empty-evidence" role="status">
+            <Images size={32} aria-hidden="true" />
+            <p>{periodLabel} · {t('noEvidenceForMonth')}</p>
+          </div>
+        ) : (
+          <label className="field-label">
+            {lang === 'mm' ? `မီးလောင်မှု အထောက်အထား (${periodSamples.length} ခု)` : `Burnt Evidence (${periodSamples.length} curated)`}
+            <select
+              value={activeSample?.sample_id || ''}
+              onChange={(e) => {
+                const found = periodSamples.find((s) => s.sample_id === e.target.value);
+                if (found) onSelect(found);
+              }}
+            >
+              <option value="" disabled>
+                {t('noSample')}
               </option>
-            ))}
-          </select>
-        </label>
+              {periodSamples.map((s: any) => (
+                <option value={s.sample_id} key={s.sample_id}>
+                  {getForestName(s, lang)} · {s.date_label || s.period} ({s.burned_area_ha} {lang === 'mm' ? 'ဟက်တာ' : 'ha'})
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
 
-        {selectedForestId && selectedForestId !== 'all' && visibleSamples.length > 1 && (
-          <div style={{ display: 'grid', gridTemplateColumns: visibleSamples.length > 2 ? 'repeat(3, 1fr)' : '1fr 1fr', gap: 8, margin: '6px 0' }}>
-            {visibleSamples.map((item: any, idx: number) => (
+        {selectedForestId && selectedForestId !== 'all' && periodSamples.length > 1 && (
+          <div style={{ display: 'grid', gridTemplateColumns: periodSamples.length > 2 ? 'repeat(3, 1fr)' : '1fr 1fr', gap: 8, margin: '6px 0' }}>
+            {periodSamples.map((item: any, idx: number) => (
               <button
                 key={item.sample_id}
                 type="button"
@@ -355,7 +405,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
         {activeSample && (
           <>
             {/* 3D Drone Orbit View with Simple Caption */}
-            <Burn3DDroneView center={center} burnPolygon={activeSample.polygon} caption={simpleCaption} />
+            <Burn3DDroneView center={center} burnPolygon={activeSample.polygon} caption={simpleCaption} lang={lang} />
 
             <div className="review-status">
               <span className={`status-label ${activeSample.locked ? 'locked' : ''}`}>
@@ -479,7 +529,7 @@ export function EvidencePanel({ pilot, sample, selectedForestId, lang = 'en', t,
           <div className="metric-grid">
             <div>
               <strong>
-                {result.known}/{visibleSamples.length}
+                {result.known}/{forestSamples.length}
               </strong>
               <span>Verified</span>
             </div>

@@ -26,7 +26,7 @@ import './workspace.css';
 import { MapView } from './MapView';
 import LegacyAnalysis from './LegacyAnalysis';
 import { EvidencePanel } from './EvidencePanel';
-import { Pilot, Sample } from './evidence';
+import { Pilot, Sample, samplesForForest } from './evidence';
 import { Hotspot, Risk, csv, download, getModelSlice, scenarioIndex } from './data';
 import { getForestName, getRegionName, getForestTypeName } from './reserves-i18n';
 import { tr } from './workspace-i18n';
@@ -242,17 +242,23 @@ function App() {
     );
   }, [reserves, forestQuery]);
 
-  const sample: any = useMemo(() => {
-    const all = pilot?.samples || [];
-    if (sampleId) {
-      const found = all.find((s) => s.sample_id === sampleId);
-      if (found) return found;
+  const forestSamples = useMemo(
+    () => samplesForForest(pilot?.samples || [], selectedForestId),
+    [pilot, selectedForestId]
+  );
+  const evidencePeriod = `${year}-${month}`;
+  const periodSamples = useMemo(
+    () => forestSamples.filter((sample) => sample.period === evidencePeriod),
+    [forestSamples, evidencePeriod]
+  );
+  const sample = periodSamples.find((sample) => sample.sample_id === sampleId) || periodSamples[0];
+  const evidenceCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const item of forestSamples) {
+      if (item.imagery) counts.set(item.period, (counts.get(item.period) || 0) + 1);
     }
-    if (selectedForestId !== 'all') {
-      return all.find((s: any) => s.forest_id === selectedForestId) || all[0];
-    }
-    return all[0];
-  }, [pilot, sampleId, selectedForestId]);
+    return counts;
+  }, [forestSamples]);
 
   useEffect(() => {
     let active = true;
@@ -291,28 +297,27 @@ function App() {
     () => Array.from({ length: 12 }, (_, i) => available.filter((r) => Number(r.date.slice(5, 7)) === i + 1).length),
     [available]
   );
-  const maximum = Math.max(1, ...monthly);
+  const timelineCounts = mode === 'evidence'
+    ? monthly.map((_, index) => evidenceCounts.get(`${year}-${String(index + 1).padStart(2, '0')}`) || 0)
+    : monthly;
+  const maximum = Math.max(1, ...timelineCounts);
+  const evidenceCountLabel = (count: number) => `${fmt(count)} ${t('imagePairCount')}`;
 
   const evidenceCells = useMemo(() => {
     if (mode !== 'evidence') return null;
-    const limit = selectedForestId === 'bago_yoma' ? 5 : 2;
-    const list =
-      selectedForestId !== 'all'
-        ? (pilot?.samples || []).filter((s: any) => s.forest_id === selectedForestId).slice(0, limit)
-        : pilot?.samples || [];
     return {
       type: 'FeatureCollection',
-      features: list.map((s: any) => ({
+      features: periodSamples.map((s: any) => ({
         type: 'Feature',
         geometry: s.polygon || s.geometry,
         properties: { sample_id: s.sample_id, cell_id: s.cell_id, forest_name: s.forest_name },
       })),
     };
-  }, [mode, pilot, selectedForestId]);
+  }, [mode, periodSamples]);
 
   const focusGeometry = useMemo(
     () => (mode === 'evidence' && sample ? { type: 'Feature', geometry: sample.polygon || sample.geometry, properties: {} } : null),
-    [mode, sample?.sample_id]
+    [mode, sample]
   );
 
   const targetDate = new Date(
@@ -391,10 +396,7 @@ function App() {
 
   const handleForestSelect = (fid: string) => {
     setSelectedForestId(fid);
-    if (fid !== 'all' && pilot?.samples) {
-      const firstForReserve = pilot.samples.find((s: any) => s.forest_id === fid);
-      if (firstForReserve) setSampleId(firstForReserve.sample_id);
-    }
+    setSampleId('');
   };
 
   const recordReview = (updated: Sample) => {
@@ -512,7 +514,7 @@ function App() {
           </span>
           <span>
             <strong>
-              Myanmar ForestWatch<span className="brand-dot">.</span>
+              {lang === 'mm' ? 'မြန်မာ့သစ်တောစောင့်ကြည့်ရေး' : <>Myanmar ForestWatch<span className="brand-dot">.</span></>}
             </strong>
             <small>{t('subtitle')}</small>
           </span>
@@ -523,7 +525,7 @@ function App() {
             return (
               <button key={item} className={mode === item ? 'active' : ''} onClick={() => chooseMode(item)} aria-pressed={mode === item}>
                 <Icon size={16} />
-                <span>{item === 'planning' ? 'Next 12 Months' : t(item)}</span>
+                <span>{t(item)}</span>
               </button>
             );
           })}
@@ -814,6 +816,9 @@ function App() {
           <EvidencePanel
             pilot={pilot}
             sample={sample}
+            forestSamples={forestSamples}
+            periodSamples={periodSamples}
+            periodLabel={`${monthText(Number(month))} ${year}`}
             selectedForestId={selectedForestId}
             lang={lang}
             t={t}
@@ -915,17 +920,20 @@ function App() {
           />
         ) : (
           <div className="month-track">
-            {monthly.map((count, index) => (
+            {timelineCounts.map((count, index) => (
               <button
                 key={index}
                 className={Number(month) === index + 1 ? 'active' : ''}
-                onClick={() => setMonth(String(index + 1).padStart(2, '0'))}
-                aria-label={`${monthText(index + 1)} ${year}`}
+                onClick={() => {
+                  setMonth(String(index + 1).padStart(2, '0'));
+                  if (mode === 'evidence') setShowEvidence(true);
+                }}
+                aria-label={`${monthText(index + 1)} ${year}${mode === 'evidence' ? ', ' + evidenceCountLabel(count) : ''}`}
                 aria-pressed={Number(month) === index + 1}
               >
                 <span
                   className="month-bar"
-                  style={{ height: (mode === 'evidence' ? 8 : Math.max(3, Math.sqrt(count / maximum) * 23)) + 'px' }}
+                  style={{ height: Math.max(3, Math.sqrt(count / maximum) * 23) + 'px' }}
                 />
                 <small>{monthText(index + 1, true)}</small>
               </button>
@@ -976,17 +984,18 @@ function App() {
                 ))}
               </select>
               <div className="calendar-months">
-                {monthly.map((count, index) => (
+                {timelineCounts.map((count, index) => (
                   <button
                     className={Number(month) === index + 1 ? 'active' : ''}
                     key={index}
                     onClick={() => {
                       setMonth(String(index + 1).padStart(2, '0'));
+                      if (mode === 'evidence') setShowEvidence(true);
                       setCalendar(false);
                     }}
                   >
                     <span>{monthText(index + 1, true)}</span>
-                    {mode === 'hotspots' && <small>{fmt(count)}</small>}
+                    <small>{mode === 'evidence' ? evidenceCountLabel(count) : fmt(count)}</small>
                   </button>
                 ))}
               </div>

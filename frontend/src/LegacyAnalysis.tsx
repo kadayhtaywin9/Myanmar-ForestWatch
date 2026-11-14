@@ -278,6 +278,11 @@ export default function LegacyAnalysis({
     [rows, year, quality, sensor, custom, aoi, view, focusForestId]
   );
 
+  const filtered = useMemo(
+    () => available.filter((r) => month === 'all' || r.date.slice(5, 7) === month),
+    [available, month]
+  );
+
   const focusCandidatePoints = useMemo(() => {
     return [...filtered]
       .sort((a, b) => (b.frp ?? 0) - (a.frp ?? 0))
@@ -288,11 +293,6 @@ export default function LegacyAnalysis({
     setFocusedPoint({ hotspot: pt, seq: Date.now() });
     setSelected(pt);
   };
-
-  const filtered = useMemo(
-    () => available.filter((r) => month === 'all' || r.date.slice(5, 7) === month),
-    [available, month]
-  );
 
   const monthly = Array.from({ length: 12 }, (_, i) => available.filter((r) => Number(r.date.slice(5, 7)) === i + 1).length);
   const maxMonth = Math.max(1, ...monthly);
@@ -837,7 +837,7 @@ export default function LegacyAnalysis({
           <span>
             MODIS + VIIRS
             <br />
-            MYANMAR / 10 RESERVED FORESTS
+            MASA
           </span>
           <div className="sidebar-source">
             <i className="live-dot" />

@@ -10,11 +10,16 @@ export interface Sample {
   sample_id: string; cell_id: string; period: string; lat: number; lon: number; geometry: any;
   season: string; viirs_count: number; label: EvidenceLabel; locked: boolean; reviewer: string;
   reason: string; imagery: Imagery | null; coverage: {status: string; passes: any[]};
+  forest_id?: string;
   polygon?: any; confounders_checked?: boolean; temporal_adequacy_confirmed?: boolean;
   review_confidence?: string; reviewed_at?: string;
 }
 export interface Pilot { schema_version: number; samples: Sample[]; evaluation: any;
   review_protocol: {min_clear_overlap: number; max_bracket_days: number; minimum_mappable_area_m2: number}; }
+export function samplesForForest(samples: Sample[], forestId: string) {
+  return forestId === 'all' ? samples : samples.filter((sample) => sample.forest_id === forestId);
+}
+
 export function validateReview(sample: Sample, label: EvidenceLabel, reviewer: string, reason: string, checked: boolean, temporal: boolean, polygon: any, pilot: Pilot) {
   if (!reviewer.trim() || !reason.trim()) return 'reviewRequired';
   if (label === 'unknown') return null;

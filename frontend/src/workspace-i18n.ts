@@ -8,7 +8,7 @@ export const additions: Record<string, [string,string]> = {
  reviewTable:['Review table','စစ်ဆေးမှု ဇယား'], validationCsv:['Validation CSV','စစ်ဆေးမှု CSV'], polygonExport:['Reviewed polygons · GeoJSON','စစ်ဆေးပြီး polygon · GeoJSON'],
  evidenceStatus:['Independent evidence: 12 image pairs acquired; 60 cell-months selected. Human review pending. VIIRS science-swath access pending.','သီးခြားအထောက်အထား: ပုံရိပ် ၁၂ တွဲ ရရှိပြီး ကွက်-လ ၆၀ ရွေးထားသည်။ လူဖြင့်စစ်ဆေးမှုနှင့် VIIRS swath ဒေတာ ရယူမှု ကျန်ရှိသည်။'],
 
- hotspots:['Hotspots','အပူကွက်များ'], evidence:['Burn evidence','လောင်ကျွမ်းမှု အထောက်အထား'], planning:['Planning outlook','စီမံကိန်း အလားအလာ'],
+ hotspots:['Hotspots','အပူကွက်များ'], evidence:['Burn evidence','လောင်ကျွမ်းမှု အထောက်အထား'], planning:['Future Risk','အနာဂတ်အန္တရာယ်'],
  subtitle:['10 Reserved Forests · Myanmar','ကြိုးဝိုင်းသစ်တော ၁၀ ခု · မြန်မာ'], evidenceIntro:['Open a cell to inspect the images and observation coverage.','ပုံရိပ်များနှင့် စောင့်ကြည့်လွှမ်းခြုံမှုကို ကြည့်ရန် ကွက်တစ်ခုရွေးပါ။'],
  mapIntro:['Explore satellite fire activity','ဂြိုဟ်တု မီးလှုပ်ရှားမှုကို လေ့လာပါ'], mapDescription:['Search and inspect satellite fire activity (2012–2026) across 10 Reserved Forests in Myanmar.','မြန်မာနိုင်ငံရှိ ကြိုးဝိုင်းသစ်တော ၁၀ ခုအတွင်း ဂြိုဟ်တုမီးတွေ့ရှိမှုများ (၂၀၁၂–၂၀၂၆) ကို ရှာဖွေလေ့လာပါ။'],
  filters:['Filters & layers','စစ်ထုတ်မှုနှင့် အလွှာများ'], analysis:['Calendar & analysis','ပြက္ခဒိန်နှင့် ခွဲခြမ်းစိတ်ဖြာမှု'], solid:['Solid panels','အလင်းမဖောက်သော ဘောင်များ'], glass:['Glass panels','မှန်သား ဘောင်များ'],
@@ -17,6 +17,8 @@ export const additions: Record<string, [string,string]> = {
  before:['Before','မတိုင်မီ'], after:['After','ပြီးနောက်'], compare:['Compare images','ပုံရိပ် နှိုင်းယှဉ်ရန်'], swipe:['Slide to compare','ရွှေ့၍ နှိုင်းယှဉ်ပါ'],
  falseColor:['False color · SWIR2 / NIR / red','ရောင်စုံအတု · SWIR2 / NIR / red'],
  clearOverlap:['Clear area in both images','ပုံနှစ်ပုံလုံး ကြည်လင်သောဧရိယာ'], candidate:['Unreviewed dNBR candidates','မစစ်ဆေးရသေးသော dNBR နေရာများ'],
+ noEvidenceForMonth:['No burn evidence for this area and month. Choose a month with image pairs.','ဤဒေသနှင့်လအတွက် မီးလောင်မှု အထောက်အထား မရှိပါ။ ပုံရိပ်အတွဲရှိသော လကို ရွေးပါ။'],
+ imagePairCount:['image pairs','ပုံရိပ်အတွဲ'],
  awaitingImages:['Imagery acquisition pending for this cell-month.','ဤကွက်နှင့်လအတွက် ပုံရိပ်ရယူရန် ကျန်ရှိသည်။'],
  viirsCoverage:['VIIRS usable-view coverage','VIIRS အသုံးဝင်သော စောင့်ကြည့်လွှမ်းခြုံမှု'], coverageUnknown:['Coverage unknown','စောင့်ကြည့်လွှမ်းခြုံမှု မသိရသေး'],
  authNeeded:['NASA science swaths require Earthdata access. Import paired fire-mask and geolocation files locally.','NASA swath ဒေတာအတွက် Earthdata ဝင်ရောက်ခွင့် လိုအပ်သည်။ Fire mask နှင့် တည်နေရာဖိုင်များကို စက်တွင် ထည့်သွင်းပါ။'],

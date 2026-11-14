@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import maplibregl from 'maplibre-gl';
+import maplibregl, { type ExpressionSpecification } from 'maplibre-gl';
 import L from 'leaflet';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import 'leaflet/dist/leaflet.css';
@@ -263,8 +263,8 @@ export function MapView(props: any) {
         });
 
         const initLang = latest.current.lang || 'en';
-        const nameExpr = initLang === 'mm' ? ['coalesce', ['get', 'name_mm'], ['get', 'name_en']] : ['get', 'name_en'];
-        const regionExpr = initLang === 'mm' ? ['coalesce', ['get', 'region_mm'], ['get', 'region_en']] : ['get', 'region_en'];
+        const nameExpr: ExpressionSpecification = initLang === 'mm' ? ['coalesce', ['get', 'name_mm'], ['get', 'name_en']] : ['get', 'name_en'];
+        const regionExpr: ExpressionSpecification = initLang === 'mm' ? ['coalesce', ['get', 'region_mm'], ['get', 'region_en']] : ['get', 'region_en'];
 
         m.addLayer({
           id: 'reserves-labels',
@@ -370,8 +370,8 @@ export function MapView(props: any) {
     if (!ready || fallback || !gl.current) return;
     const m = gl.current;
     if (!m.getLayer('reserves-labels')) return;
-    const nameExpr = lang === 'mm' ? ['coalesce', ['get', 'name_mm'], ['get', 'name_en']] : ['get', 'name_en'];
-    const regionExpr = lang === 'mm' ? ['coalesce', ['get', 'region_mm'], ['get', 'region_en']] : ['get', 'region_en'];
+    const nameExpr: ExpressionSpecification = lang === 'mm' ? ['coalesce', ['get', 'name_mm'], ['get', 'name_en']] : ['get', 'name_en'];
+    const regionExpr: ExpressionSpecification = lang === 'mm' ? ['coalesce', ['get', 'region_mm'], ['get', 'region_en']] : ['get', 'region_en'];
     m.setLayoutProperty('reserves-labels', 'text-field', [
       'format',
       nameExpr,

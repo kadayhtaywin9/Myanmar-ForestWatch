@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600&display=swap');
 .workspace{--ink:#edf8f2;--secondary:#dcebe2;--mint:#6ee7b7;--glass:rgba(10,24,19,.20);--glass-dense:rgba(12,28,22,.34);--line:rgba(223,255,239,.18);--control:rgba(217,255,234,.035);position:relative;height:100dvh;min-height:600px;overflow:hidden;color:var(--ink);font-family:'DM Sans','Noto Sans Myanmar',sans-serif;background:#102a22;font-size:13px;isolation:isolate}
-[data-theme=light] .workspace{--ink:#102a22;--secondary:#284335;--mint:#166b4f;--glass:rgba(244,251,247,.24);--glass-dense:rgba(244,251,247,.38);--line:rgba(16,42,34,.18);--control:rgba(16,42,34,.07)}
+[data-theme=light] .workspace{--ink:#000;--secondary:#000;--mint:#166b4f;--glass:rgba(244,251,247,.24);--glass-dense:rgba(244,251,247,.38);--line:rgba(16,42,34,.18);--control:rgba(16,42,34,.07)}
 .workspace *{box-sizing:border-box}.workspace button,.workspace input,.workspace select,.workspace textarea{font:inherit}.workspace button,.workspace a{-webkit-tap-highlight-color:transparent}.workspace button{cursor:pointer;color:inherit}.workspace button:disabled{opacity:.5;cursor:not-allowed}.workspace button:focus-visible,.workspace a:focus-visible,.workspace input:focus-visible,.workspace select:focus-visible,.workspace textarea:focus-visible{outline:3px solid var(--mint);outline-offset:3px}.workspace h1,.workspace h2,.workspace h3,.workspace p{margin:0}.workspace a{color:inherit;text-decoration:none}.workspace .glass{background:var(--glass);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.13),0 12px 38px rgba(0,15,9,.18);background:linear-gradient(135deg,rgba(255,255,255,.11) 0%,var(--glass) 100%);backdrop-filter:blur(18px) saturate(165%);-webkit-backdrop-filter:blur(18px) saturate(165%)}
 .workspace.solid{--glass:var(--glass-dense)}.workspace.solid .glass{backdrop-filter:none;-webkit-backdrop-filter:none}
 .workspace .map-stage{position:absolute;inset:0;z-index:0}.workspace .map-stage .map-wrap{height:100%;width:100%;border-radius:0;background:#1c392b}.workspace .map-stage .map-canvas{position:absolute;inset:0}.workspace .map-stage .map-place{display:none}.workspace .map-stage .leaflet-container{background:#203d32}.workspace .map-stage .map-top{top:154px;left:auto;right:26px;display:block;z-index:2}.workspace .map-stage .map-chip{display:none}.workspace .map-stage .basemap-tabs{background:var(--glass-dense);border:1px solid var(--line);border-radius:16px;padding:4px;color:var(--ink);box-shadow:0 6px 20px #0002}.workspace .map-stage .basemap-tabs button{font-size:11px;padding:9px 13px;min-height:36px;border-radius:12px;color:var(--secondary)}.workspace .map-stage .basemap-tabs button.selected{background:var(--control);color:var(--ink)}.workspace .map-stage .map-tools{top:214px;right:26px;gap:7px;z-index:2}.workspace .map-stage .map-tools button{width:40px;height:40px;border-radius:14px;background:var(--glass-dense);border:1px solid var(--line);color:var(--ink);box-shadow:0 6px 18px #0002}.workspace .map-stage .map-layer-menu{top:210px;right:80px;background:var(--glass-dense);color:var(--ink);border-color:var(--line);border-radius:15px}.workspace .map-stage .map-legend{bottom:155px;right:26px;padding:17px 18px;width:215px;border-radius:18px;background:var(--glass-dense);color:var(--ink);border:1px solid var(--line);font-size:11px;box-shadow:0 8px 20px #0002}.workspace .map-stage .map-legend>small{font-size:10px;color:var(--secondary);letter-spacing:.08em}.workspace .map-stage .map-legend span{line-height:1.6}.workspace .map-stage .map-legend .legend-note{color:var(--secondary);font-size:10px;margin-top:7px}.workspace .evidence-square{display:inline-block;width:11px;height:11px;border:2px solid #c8aeff;background:#c8aeff22}.workspace .hatch-box{background:repeating-linear-gradient(135deg,transparent 0 3px,#a8b3af99 3px 4px);border:1px solid #a8b3af;width:12px;height:12px;display:inline-block;flex-shrink:0}.workspace .map-stage .map-error{bottom:34px;left:auto;right:10px;background:var(--glass-dense);color:var(--ink);font-size:10px}.workspace .map-stage .leaflet-control-attribution,.workspace .map-stage .maplibregl-ctrl-attrib{background:rgba(16,42,34,.88);color:#e8f3ed;font-size:9px;max-width:calc(100vw - 150px)}.workspace .map-stage .leaflet-control-attribution a,.workspace .map-stage .maplibregl-ctrl-attrib a{color:#e8f3ed}.workspace .map-stage .leaflet-control-scale-line{border-color:#d1e4d6;background:#102a22bd;color:#fff;text-shadow:none}
@@ -305,4 +305,33 @@
   font-size: 12px;
   font-weight: 500;
   z-index: 2;
+}
+
+.workspace .drone-3d-card {
+  display: block;
+  position: relative;
+  inset: auto;
+  width: 100%;
+  padding: 0;
+  background: #10251f;
+}
+.workspace .drone-3d-card:modal {
+  position: fixed;
+  inset: 0;
+  width: min(1080px, calc(100vw - 32px));
+  margin: auto;
+}
+.drone-3d-card::backdrop {
+  background: rgba(0, 0, 0, 0.68);
+}
+.drone-3d-card:modal .drone-3d-canvas {
+  height: min(72dvh, 680px);
+}
+.drone-3d-card:modal .drone-3d-caption {
+  font-size: 14px;
+}
+.drone-3d-controls button[aria-label] {
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
 }
