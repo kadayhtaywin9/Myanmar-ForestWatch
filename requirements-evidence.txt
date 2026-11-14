@@ -1,0 +1,5 @@
+-r requirements.lock.txt
+rasterio==1.4.3
+h5py==3.14.0
+netCDF4==1.7.2
+Pillow==12.0.0

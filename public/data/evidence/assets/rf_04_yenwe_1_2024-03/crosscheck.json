@@ -1,0 +1,1 @@
+{"sample_id": "rf_04_yenwe_1_2024-03", "forest_id": "rf_04_yenwe", "forest_name": "Yenwe Reserved Forest", "burned_area_ha": 365, "mean_dnbr": 0.48, "severity": "High", "viirs_hotspots": 19, "burned_pixels": 9125, "valid_pixels": 62500, "independent_truth": false}

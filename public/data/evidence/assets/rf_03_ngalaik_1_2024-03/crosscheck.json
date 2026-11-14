@@ -1,0 +1,1 @@
+{"sample_id": "rf_03_ngalaik_1_2024-03", "forest_id": "rf_03_ngalaik", "forest_name": "Ngalaik Reserved Forest", "burned_area_ha": 245, "mean_dnbr": 0.42, "severity": "High", "viirs_hotspots": 12, "burned_pixels": 6125, "valid_pixels": 62500, "independent_truth": false}

@@ -1,0 +1,1 @@
+{"sample_id": "rf_01_panlaung_1_2024-03", "forest_id": "rf_01_panlaung", "forest_name": "Panlaung Reserved Forest", "burned_area_ha": 284, "mean_dnbr": 0.44, "severity": "High", "viirs_hotspots": 14, "burned_pixels": 7100, "valid_pixels": 62500, "independent_truth": false}

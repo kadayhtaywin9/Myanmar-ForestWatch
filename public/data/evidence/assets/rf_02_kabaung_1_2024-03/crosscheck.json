@@ -1,0 +1,1 @@
+{"sample_id": "rf_02_kabaung_1_2024-03", "forest_id": "rf_02_kabaung", "forest_name": "Kabaung Reserved Forest", "burned_area_ha": 418, "mean_dnbr": 0.51, "severity": "High", "viirs_hotspots": 23, "burned_pixels": 10450, "valid_pixels": 62500, "independent_truth": false}

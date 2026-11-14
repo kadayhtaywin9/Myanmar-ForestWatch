@@ -1,0 +1,1 @@
+{"sample_id": "rf_05_south_zamaye_1_2024-02", "forest_id": "rf_05_south_zamaye", "forest_name": "South Zamaye Reserved Forest", "burned_area_ha": 340, "mean_dnbr": 0.46, "severity": "High", "viirs_hotspots": 18, "burned_pixels": 8500, "valid_pixels": 62500, "independent_truth": false}

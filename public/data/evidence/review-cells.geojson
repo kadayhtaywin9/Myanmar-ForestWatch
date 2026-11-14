@@ -1,0 +1,3443 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.51030276707505,
+              17.814526524728375
+            ],
+            [
+              95.50382168659878,
+              17.83141440301698
+            ],
+            [
+              95.50997150097342,
+              17.83152450447759
+            ],
+            [
+              95.51030276707505,
+              17.814526524728375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "25_394_2024-09",
+        "cell_id": "25_394",
+        "period": "2024-09",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.45747838342528,
+              18.101316319441235
+            ],
+            [
+              95.50464699083247,
+              18.102178181454143
+            ],
+            [
+              95.50554092650319,
+              18.057069865818928
+            ],
+            [
+              95.45838432134362,
+              18.056210295373283
+            ],
+            [
+              95.45747838342528,
+              18.101316319441235
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "25_400_2024-03",
+        "cell_id": "25_400",
+        "period": "2024-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2B_T46QGF_20240305T041610_L2A",
+        "after_scene": "S2A_T46QGF_20240330T042022_L2A",
+        "before_date": "2024-03-05T04:23:12.598000Z",
+        "after_date": "2024-03-30T04:23:16.526000Z",
+        "clear_overlap": 0.9876,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/25_400_2024-03",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.008403361344537815,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.45656979635119,
+              18.146422088796488
+            ],
+            [
+              95.50375044105665,
+              18.147286243506073
+            ],
+            [
+              95.50464699083247,
+              18.102178181454143
+            ],
+            [
+              95.45747838342528,
+              18.101316319441235
+            ],
+            [
+              95.45656979635119,
+              18.146422088796488
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "25_401_2025-02",
+        "cell_id": "25_401",
+        "period": "2025-02",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2C_T46QGF_20250203T041457_L2A",
+        "after_scene": "S2B_T46QGF_20250228T041602_L2A",
+        "before_date": "2025-02-03T04:23:44.102000Z",
+        "after_date": "2025-02-28T04:23:19.842000Z",
+        "clear_overlap": 0.985,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/25_401_2025-02",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003468208092485549,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.54826466993809,
+              18.283468319414396
+            ],
+            [
+              95.50104507605757,
+              18.282608902288363
+            ],
+            [
+              95.50084566073242,
+              18.292536982197237
+            ],
+            [
+              95.51264843637694,
+              18.32794530913079
+            ],
+            [
+              95.54736981370286,
+              18.328577627880684
+            ],
+            [
+              95.54826466993809,
+              18.283468319414396
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "26_405_2025-02",
+        "cell_id": "26_405",
+        "period": "2025-02",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2C_T46QGF_20250203T041457_L2A",
+        "after_scene": "S2B_T46QGF_20250228T041602_L2A",
+        "before_date": "2025-02-03T04:23:44.102000Z",
+        "after_date": "2025-02-28T04:23:19.842000Z",
+        "clear_overlap": 0.9997,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/26_405_2025-02",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003468208092485549,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.54291569759924,
+              18.4187470927977
+            ],
+            [
+              95.54542294699031,
+              18.426268840970902
+            ],
+            [
+              95.54557231480459,
+              18.418795478074127
+            ],
+            [
+              95.54291569759924,
+              18.4187470927977
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "26_408_2025-05",
+        "cell_id": "26_408",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.5588016963852,
+              17.742136910171137
+            ],
+            [
+              95.60588040847213,
+              17.742957956104576
+            ],
+            [
+              95.60673008597394,
+              17.697843158990295
+            ],
+            [
+              95.5596631031577,
+              17.69702433483301
+            ],
+            [
+              95.5588016963852,
+              17.742136910171137
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "27_392_2025-10",
+        "cell_id": "27_392",
+        "period": "2025-10",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.13043478260869565,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                95.65548690004299,
+                17.607392508211092
+              ],
+              [
+                95.65528301042752,
+                17.607435010406107
+              ],
+              [
+                95.65516567395915,
+                17.608410914307306
+              ],
+              [
+                95.65546803183504,
+                17.608416040626853
+              ],
+              [
+                95.65548690004299,
+                17.607392508211092
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                95.64633351982894,
+                17.607396821411953
+              ],
+              [
+                95.64492211435567,
+                17.606939043614776
+              ],
+              [
+                95.6435181858817,
+                17.60512357890599
+              ],
+              [
+                95.63833427543938,
+                17.605100733318693
+              ],
+              [
+                95.63554305795512,
+                17.608077232651976
+              ],
+              [
+                95.64724266602829,
+                17.608276418759623
+              ],
+              [
+                95.64633351982894,
+                17.607396821411953
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "28_389_2024-12",
+        "cell_id": "28_389",
+        "period": "2024-12",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2A_T46QGE_20241202T040738_L2A",
+        "after_scene": "S2B_T46QGE_20241230T042043_L2A",
+        "before_date": "2024-12-02T04:13:35.905000Z",
+        "after_date": "2024-12-30T04:23:32.638000Z",
+        "clear_overlap": 0.9319,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/28_389_2024-12",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.60673008597394,
+              17.697843158990295
+            ],
+            [
+              95.65379958608729,
+              17.698650752151348
+            ],
+            [
+              95.65463504881578,
+              17.653533518637882
+            ],
+            [
+              95.60757724617689,
+              17.652728115744615
+            ],
+            [
+              95.60673008597394,
+              17.697843158990295
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "28_391_2025-09",
+        "cell_id": "28_391",
+        "period": "2025-09",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.60245646688439,
+              17.923414671588503
+            ],
+            [
+              95.64958497594215,
+              17.9242332319634
+            ],
+            [
+              95.6504328804956,
+              17.8791172296327
+            ],
+            [
+              95.60331624290363,
+              17.87830086482865
+            ],
+            [
+              95.60245646688439,
+              17.923414671588503
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "28_396_2025-01",
+        "cell_id": "28_396",
+        "period": "2025-01",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2A_T46QGE_20250101T040413_L2A",
+        "after_scene": "S2B_T46QGE_20250126T040657_L2A",
+        "before_date": "2025-01-01T04:13:36.204000Z",
+        "after_date": "2025-01-26T04:13:38.131000Z",
+        "clear_overlap": 0.9765,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/28_396_2025-01",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.009584664536741214,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.60072931583599,
+              18.013641537393713
+            ],
+            [
+              95.64788167262392,
+              18.014464492126457
+            ],
+            [
+              95.64873457429603,
+              17.96934898632073
+            ],
+            [
+              95.60159415885319,
+              17.968528229304084
+            ],
+            [
+              95.60072931583599,
+              18.013641537393713
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "28_398_2025-03",
+        "cell_id": "28_398",
+        "period": "2025-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2C_T46QGE_20250302T040537_L2A",
+        "after_scene": "S2B_T46QGE_20250330T042320_L2A",
+        "before_date": "2025-03-02T04:14:00.285000Z",
+        "after_date": "2025-03-30T04:23:32.573000Z",
+        "clear_overlap": 0.9848,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/28_398_2025-03",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003464203233256351,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.59104787242798,
+              18.509871285017237
+            ],
+            [
+              95.63833390315185,
+              18.51071848652635
+            ],
+            [
+              95.63921450169406,
+              18.46560575286129
+            ],
+            [
+              95.5919407996017,
+              18.46476076111543
+            ],
+            [
+              95.59104787242798,
+              18.509871285017237
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "28_409_2024-12",
+        "cell_id": "28_409",
+        "period": "2024-12",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2A_T46QGF_20241205T042122_L2A",
+        "after_scene": "S2B_T46QGF_20241230T042043_L2A",
+        "before_date": "2024-12-05T04:23:17.860000Z",
+        "after_date": "2024-12-30T04:23:18.252000Z",
+        "clear_overlap": 0.9998,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/28_409_2024-12",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.64788167262392,
+              18.014464492126457
+            ],
+            [
+              95.69503653237979,
+              18.01527599969508
+            ],
+            [
+              95.69587748976313,
+              17.970158326723723
+            ],
+            [
+              95.64873457429603,
+              17.96934898632073
+            ],
+            [
+              95.64788167262392,
+              18.014464492126457
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "29_398_2025-07",
+        "cell_id": "29_398",
+        "period": "2025-07",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.70169533116217,
+              17.654327718359696
+            ],
+            [
+              95.74875805852773,
+              17.655110712330806
+            ],
+            [
+              95.74956770740995,
+              17.609988947193433
+            ],
+            [
+              95.70251664852378,
+              17.609208081564816
+            ],
+            [
+              95.70169533116217,
+              17.654327718359696
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "30_390_2024-05",
+        "cell_id": "30_390",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.07317073170731707,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.69587748976313,
+              17.970158326723723
+            ],
+            [
+              95.74302287028414,
+              17.97095624787903
+            ],
+            [
+              95.74384945040087,
+              17.925836191853165
+            ],
+            [
+              95.69671598209086,
+              17.925040406260347
+            ],
+            [
+              95.69587748976313,
+              17.970158326723723
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "30_397_2024-03",
+        "cell_id": "30_397",
+        "period": "2024-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.69587748976313,
+              17.970158326723723
+            ],
+            [
+              95.74302287028414,
+              17.97095624787903
+            ],
+            [
+              95.74384945040087,
+              17.925836191853165
+            ],
+            [
+              95.69671598209086,
+              17.925040406260347
+            ],
+            [
+              95.69587748976313,
+              17.970158326723723
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "30_397_2025-03",
+        "cell_id": "30_397",
+        "period": "2025-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003464203233256351,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.694193107038,
+              18.060393424599916
+            ],
+            [
+              95.74136241696368,
+              18.061195620017926
+            ],
+            [
+              95.74219386009239,
+              18.01607605745767
+            ],
+            [
+              95.69503653237979,
+              18.01527599969508
+            ],
+            [
+              95.694193107038,
+              18.060393424599916
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "30_399_2024-07",
+        "cell_id": "30_399",
+        "period": "2024-07",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.74956770740995,
+              17.609988947193433
+            ],
+            [
+              95.7966211738349,
+              17.61075863497722
+            ],
+            [
+              95.79741677858397,
+              17.565634531083624
+            ],
+            [
+              95.75037494875176,
+              17.564866940189578
+            ],
+            [
+              95.74956770740995,
+              17.609988947193433
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "31_389_2025-05",
+        "cell_id": "31_389",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.13043478260869565,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.74875805852773,
+              17.655110712330806
+            ],
+            [
+              95.795823196214,
+              17.655882498008058
+            ],
+            [
+              95.7966211738349,
+              17.61075863497722
+            ],
+            [
+              95.74956770740995,
+              17.609988947193433
+            ],
+            [
+              95.74875805852773,
+              17.655110712330806
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "31_390_2025-05",
+        "cell_id": "31_390",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.13043478260869565,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.74219386009239,
+              18.01607605745767
+            ],
+            [
+              95.78935362074026,
+              18.016864662809283
+            ],
+            [
+              95.79017068087846,
+              17.971742747189467
+            ],
+            [
+              95.74302287028414,
+              17.97095624787903
+            ],
+            [
+              95.74219386009239,
+              18.01607605745767
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "31_398_2025-01",
+        "cell_id": "31_398",
+        "period": "2025-01",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003464203233256351,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.73632250496865,
+              18.33190777605048
+            ],
+            [
+              95.78356689918489,
+              18.332711152808766
+            ],
+            [
+              95.78440080446259,
+              18.287590970990486
+            ],
+            [
+              95.73716860638818,
+              18.286789707576304
+            ],
+            [
+              95.73632250496865,
+              18.33190777605048
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "31_405_2025-01",
+        "cell_id": "31_405",
+        "period": "2025-01",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.003468208092485549,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.73119427470584,
+              18.60261089585466
+            ],
+            [
+              95.7785125890121,
+              18.60342697498489
+            ],
+            [
+              95.77936104561542,
+              18.558308301341665
+            ],
+            [
+              95.73205514001681,
+              18.55749434194591
+            ],
+            [
+              95.73119427470584,
+              18.60261089585466
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "31_411_2024-04",
+        "cell_id": "31_411",
+        "period": "2024-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2B_T46QGF_20240401T040809_L2A",
+        "after_scene": "S2A_T46QGF_20240429T042127_L2A",
+        "before_date": "2024-04-01T04:13:20.909000Z",
+        "after_date": "2024-04-29T04:23:19.614000Z",
+        "clear_overlap": 0.5916,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/31_411_2024-04",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0056022408963585435,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.78935362074026,
+              18.016864662809283
+            ],
+            [
+              95.83651577929183,
+              18.017641813181974
+            ],
+            [
+              95.83732088655545,
+              17.972517822094748
+            ],
+            [
+              95.79017068087846,
+              17.971742747189467
+            ],
+            [
+              95.78935362074026,
+              18.016864662809283
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_398_2025-05",
+        "cell_id": "32_398",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.09090909090909091,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.78853416269669,
+              18.061986332444004
+            ],
+            [
+              95.83570830916442,
+              18.06276555930256
+            ],
+            [
+              95.83651577929183,
+              18.017641813181974
+            ],
+            [
+              95.78935362074026,
+              18.016864662809283
+            ],
+            [
+              95.78853416269669,
+              18.061986332444004
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_399_2024-02",
+        "cell_id": "32_399",
+        "period": "2024-02",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.008403361344537815,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.78771230391675,
+              18.107107755526158
+            ],
+            [
+              95.83489847338326,
+              18.107889059892283
+            ],
+            [
+              95.83570830916442,
+              18.06276555930256
+            ],
+            [
+              95.78853416269669,
+              18.061986332444004
+            ],
+            [
+              95.78771230391675,
+              18.107107755526158
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_400_2024-05",
+        "cell_id": "32_400",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.05,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.78688804155942,
+              18.15222893148856
+            ],
+            [
+              95.83408626914859,
+              18.153012314387233
+            ],
+            [
+              95.83489847338326,
+              18.107889059892283
+            ],
+            [
+              95.78771230391675,
+              18.107107755526158
+            ],
+            [
+              95.78688804155942,
+              18.15222893148856
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_401_2025-08",
+        "cell_id": "32_401",
+        "period": "2025-08",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.09090909090909091,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.78189183192833,
+              18.422950766028194
+            ],
+            [
+              95.82916314818088,
+              18.42374664183101
+            ],
+            [
+              95.82998962248702,
+              18.378624875727645
+            ],
+            [
+              95.78273057597397,
+              18.377831084676394
+            ],
+            [
+              95.78189183192833,
+              18.422950766028194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_407_2025-02",
+        "cell_id": "32_407",
+        "period": "2025-02",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.006389776357827476,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.77766169691347,
+              18.648545395291343
+            ],
+            [
+              95.82499489396051,
+              18.64935171063977
+            ],
+            [
+              95.82583333881195,
+              18.604231200308053
+            ],
+            [
+              95.7785125890121,
+              18.60342697498489
+            ],
+            [
+              95.77766169691347,
+              18.648545395291343
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "32_412_2025-03",
+        "cell_id": "32_412",
+        "period": "2025-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.006389776357827476,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.83081371133265,
+              18.333502860153214
+            ],
+            [
+              95.87806290607982,
+              18.334282895499815
+            ],
+            [
+              95.87887241044182,
+              18.28915857903717
+            ],
+            [
+              95.83163541757719,
+              18.28838059566956
+            ],
+            [
+              95.83081371133265,
+              18.333502860153214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "33_405_2024-05",
+        "cell_id": "33_405",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.05,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.82916314818088,
+              18.42374664183101
+            ],
+            [
+              95.87643685276169,
+              18.42453078421762
+            ],
+            [
+              95.87725105445888,
+              18.3794069640795
+            ],
+            [
+              95.82998962248702,
+              18.378624875727645
+            ],
+            [
+              95.82916314818088,
+              18.42374664183101
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "33_407_2024-04",
+        "cell_id": "33_407",
+        "period": "2024-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0056022408963585435,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.82499489396051,
+              18.64935171063977
+            ],
+            [
+              95.8723304938342,
+              18.65014613875748
+            ],
+            [
+              95.87315648851852,
+              18.605023569194287
+            ],
+            [
+              95.82583333881195,
+              18.604231200308053
+            ],
+            [
+              95.82499489396051,
+              18.64935171063977
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "33_412_2024-07",
+        "cell_id": "33_412",
+        "period": "2024-07",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.001759014951627089,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.86478966964846,
+              19.05623786778658
+            ],
+            [
+              95.83434134646753,
+              19.055717548670664
+            ],
+            [
+              95.85840332834505,
+              19.10126344293883
+            ],
+            [
+              95.86393987195571,
+              19.101357894502918
+            ],
+            [
+              95.86478966964846,
+              19.05623786778658
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "33_422_2025-05",
+        "cell_id": "33_422",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0017316017316017316,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.88208701130166,
+              18.108658845541324
+            ],
+            [
+              95.92927788253824,
+              18.109417109964514
+            ],
+            [
+              95.9300636639637,
+              18.064289546200325
+            ],
+            [
+              95.88288482128424,
+              18.063533298055113
+            ],
+            [
+              95.88208701130166,
+              18.108658845541324
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "34_400_2025-04",
+        "cell_id": "34_400",
+        "period": "2025-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.009584664536741214,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.8690028142941,
+              18.8306338935902
+            ],
+            [
+              95.91639095046413,
+              18.831424555968002
+            ],
+            [
+              95.9172138353595,
+              18.78630096430017
+            ],
+            [
+              95.8698382950936,
+              18.78551233450672
+            ],
+            [
+              95.8690028142941,
+              18.8306338935902
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "34_416_2024-04",
+        "cell_id": "34_416",
+        "period": "2024-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2B_T46QHF_20240401T040809_L2A",
+        "after_scene": "S2A_T46QGF_20240429T042127_L2A",
+        "before_date": "2024-04-01T04:13:17.692000Z",
+        "after_date": "2024-04-29T04:23:19.614000Z",
+        "clear_overlap": 0.9916,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/34_416_2024-04",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0056022408963585435,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.91140433738649,
+              19.102160774483355
+            ],
+            [
+              95.86393987195571,
+              19.101357894502918
+            ],
+            [
+              95.86375068845692,
+              19.111385231722025
+            ],
+            [
+              95.88246441953164,
+              19.14680765125631
+            ],
+            [
+              95.91056499077516,
+              19.14728258384805
+            ],
+            [
+              95.91140433738649,
+              19.102160774483355
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "34_423_2024-05",
+        "cell_id": "34_423",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.05,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.93550001205436,
+              17.748389812212665
+            ],
+            [
+              95.9825979121054,
+              17.749120694901244
+            ],
+            [
+              95.98319904495912,
+              17.713233075808507
+            ],
+            [
+              95.97889108826234,
+              17.71469974376682
+            ],
+            [
+              95.9788910863071,
+              17.714699744432494
+            ],
+            [
+              95.9771286413833,
+              17.716951757440626
+            ],
+            [
+              95.9753661964595,
+              17.71920377044876
+            ],
+            [
+              95.9747787142187,
+              17.71802880731613
+            ],
+            [
+              95.9741912319779,
+              17.716853844183504
+            ],
+            [
+              95.9741912319779,
+              17.7168538441835
+            ],
+            [
+              95.97483805626797,
+              17.714690028560256
+            ],
+            [
+              95.97548488055804,
+              17.712526212937007
+            ],
+            [
+              95.97522418923137,
+              17.710929981509423
+            ],
+            [
+              95.97752029710983,
+              17.705495859590314
+            ],
+            [
+              95.97774592655666,
+              17.703903003596526
+            ],
+            [
+              95.93626750509117,
+              17.703260315829777
+            ],
+            [
+              95.93550001205436,
+              17.748389812212665
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "35_392_2024-05",
+        "cell_id": "35_392",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.07317073170731707,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.92371291024425,
+              18.425303190626824
+            ],
+            [
+              95.97099128519218,
+              18.42606385853547
+            ],
+            [
+              95.9717809332323,
+              18.380936022508237
+            ],
+            [
+              95.92451483650535,
+              18.38017734717827
+            ],
+            [
+              95.92371291024425,
+              18.425303190626824
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "35_407_2024-01",
+        "cell_id": "35_407",
+        "period": "2024-01",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.91885258771605,
+              18.696053024286527
+            ],
+            [
+              95.9662053778508,
+              18.696825668823994
+            ],
+            [
+              95.96700875949135,
+              18.651699322943593
+            ],
+            [
+              95.9196684608945,
+              18.65092867704554
+            ],
+            [
+              95.91885258771605,
+              18.696053024286527
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "35_413_2025-07",
+        "cell_id": "35_413",
+        "period": "2025-07",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0017316017316017316,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.91803438015559,
+              18.741177120222265
+            ],
+            [
+              95.96539969753148,
+              18.741951764420456
+            ],
+            [
+              95.9662053778508,
+              18.696825668823994
+            ],
+            [
+              95.91885258771605,
+              18.696053024286527
+            ],
+            [
+              95.91803438015559,
+              18.741177120222265
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "35_414_2024-02",
+        "cell_id": "35_414",
+        "period": "2024-02",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2B_T46QHF_20240201T040641_L2A",
+        "after_scene": "S2A_T46QHF_20240229T041932_L2A",
+        "before_date": "2024-02-01T04:13:15.534000Z",
+        "after_date": "2024-02-29T04:23:11.666000Z",
+        "clear_overlap": 0.9961,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/35_414_2024-02",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0056022408963585435,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.91224132357296,
+              19.057038708852907
+            ],
+            [
+              95.95969533498679,
+              19.057827379543756
+            ],
+            [
+              95.96051718529638,
+              19.012703051297034
+            ],
+            [
+              95.91307595226844,
+              19.01191638750646
+            ],
+            [
+              95.91224132357296,
+              19.057038708852907
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "35_421_2025-03",
+        "cell_id": "35_421",
+        "period": "2025-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2C_T46QHG_20250302T040537_L2A",
+        "after_scene": "S2B_T46QHG_20250330T041545_L2A",
+        "before_date": "2025-03-02T04:13:28.573000Z",
+        "after_date": "2025-03-30T04:22:59.989000Z",
+        "clear_overlap": 0.9993,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/35_421_2025-03",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.00641025641025641,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.98107970083701,
+              17.839382926963196
+            ],
+            [
+              96.02820345556403,
+              17.84010642581181
+            ],
+            [
+              96.02895185960428,
+              17.794973480098573
+            ],
+            [
+              95.98183992871535,
+              17.794251930543076
+            ],
+            [
+              95.98107970083701,
+              17.839382926963196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "36_394_2024-05",
+        "cell_id": "36_394",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.07317073170731707,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.98031722585057,
+              17.88451368360515
+            ],
+            [
+              96.0274528393324,
+              17.88523913269353
+            ],
+            [
+              96.02820345556403,
+              17.84010642581181
+            ],
+            [
+              95.98107970083701,
+              17.839382926963196
+            ],
+            [
+              95.98031722585057,
+              17.88451368360515
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "36_395_2025-06",
+        "cell_id": "36_395",
+        "period": "2025-06",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.96296883634852,
+              18.87732854401431
+            ],
+            [
+              96.0103742600784,
+              18.878097144127686
+            ],
+            [
+              96.01117421588407,
+              18.832969830828343
+            ],
+            [
+              95.96378142960535,
+              18.832203202564447
+            ],
+            [
+              95.96296883634852,
+              18.87732854401431
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "36_417_2025-04",
+        "cell_id": "36_417",
+        "period": "2025-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "S2C_T46QHF_20250401T040909_L2A",
+        "after_scene": "S2A_T46QHF_20250426T041213_L2A",
+        "before_date": "2025-04-01T04:13:41.350000Z",
+        "after_date": "2025-04-26T04:23:26.102000Z",
+        "clear_overlap": 0.9925,
+        "resolution_m": 20,
+        "imagery_directory": "data/evidence/assets/36_417_2025-04",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.00641025641025641,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.02518769155785,
+              18.020635814820743
+            ],
+            [
+              96.0723613138105,
+              18.02135565307601
+            ],
+            [
+              96.07310661581893,
+              17.976221743518042
+            ],
+            [
+              96.02594495993164,
+              17.975503827750536
+            ],
+            [
+              96.02518769155785,
+              18.020635814820743
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_398_2024-04",
+        "cell_id": "37_398",
+        "period": "2024-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.0244282005833,
+              18.06576756084932
+            ],
+            [
+              96.07161382429058,
+              18.06648932253636
+            ],
+            [
+              96.0723613138105,
+              18.02135565307601
+            ],
+            [
+              96.02518769155785,
+              18.020635814820743
+            ],
+            [
+              96.0244282005833,
+              18.06576756084932
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_399_2024-04",
+        "cell_id": "37_399",
+        "period": "2024-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.008403361344537815,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.02136795803045,
+              18.24629212351999
+            ],
+            [
+              96.06860193927461,
+              18.247021588434915
+            ],
+            [
+              96.06935820477402,
+              18.201888884847445
+            ],
+            [
+              96.02213636575482,
+              18.201161347170697
+            ],
+            [
+              96.02136795803045,
+              18.24629212351999
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_403_2024-07",
+        "cell_id": "37_403",
+        "period": "2024-07",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.02136795803045,
+              18.24629212351999
+            ],
+            [
+              96.06860193927461,
+              18.247021588434915
+            ],
+            [
+              96.06935820477402,
+              18.201888884847445
+            ],
+            [
+              96.02213636575482,
+              18.201161347170697
+            ],
+            [
+              96.02136795803045,
+              18.24629212351999
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_403_2025-05",
+        "cell_id": "37_403",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.00552667078477,
+              19.148855724192572
+            ],
+            [
+              96.05301096547144,
+              19.149623939409572
+            ],
+            [
+              96.05381175181269,
+              19.104496196028865
+            ],
+            [
+              96.00634031341882,
+              19.103729927822155
+            ],
+            [
+              96.00552667078477,
+              19.148855724192572
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_423_2025-05",
+        "cell_id": "37_423",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.09090909090909091,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.00471073707901,
+              19.1939812658392
+            ],
+            [
+              96.00469308432079,
+              19.194956154902968
+            ],
+            [
+              96.05208360604075,
+              19.201726229434392
+            ],
+            [
+              96.05220792422197,
+              19.194751429087976
+            ],
+            [
+              96.00471073707901,
+              19.1939812658392
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "37_425_2024-11",
+        "cell_id": "37_425",
+        "period": "2024-11",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.00243605359317905,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.07310661581893,
+              17.976221743518042
+            ],
+            [
+              96.12027045664111,
+              17.976928220294386
+            ],
+            [
+              96.12100163982994,
+              17.931792180243455
+            ],
+            [
+              96.07384973289096,
+              17.931087594411416
+            ],
+            [
+              96.07310661581893,
+              17.976221743518042
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "38_397_2024-05",
+        "cell_id": "38_397",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.11434338149155,
+              18.338007904473937
+            ],
+            [
+              96.16160612931135,
+              18.33871785568882
+            ],
+            [
+              96.16234236489264,
+              18.293581872177942
+            ],
+            [
+              96.11509183516954,
+              18.292873788670292
+            ],
+            [
+              96.11434338149155,
+              18.338007904473937
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "39_405_2024-06",
+        "cell_id": "39_405",
+        "period": "2024-06",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.1645382871161,
+              18.158172474779935
+            ],
+            [
+              96.211754499359,
+              18.158863394574308
+            ],
+            [
+              96.21247014094443,
+              18.113724614968838
+            ],
+            [
+              96.16526600814123,
+              18.11303552849608
+            ],
+            [
+              96.1645382871161,
+              18.158172474779935
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_401_2024-11",
+        "cell_id": "40_401",
+        "period": "2024-11",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0036540803897685747,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.16380844125332,
+              18.203309181182505
+            ],
+            [
+              96.21103676817626,
+              18.20400193520641
+            ],
+            [
+              96.211754499359,
+              18.158863394574308
+            ],
+            [
+              96.1645382871161,
+              18.158172474779935
+            ],
+            [
+              96.16380844125332,
+              18.203309181182505
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_402_2025-04",
+        "cell_id": "40_402",
+        "period": "2025-04",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.009584664536741214,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.16160612931135,
+              18.33871785568882
+            ],
+            [
+              96.2088710121341,
+              18.33941611787789
+            ],
+            [
+              96.20959502706357,
+              18.29427829739628
+            ],
+            [
+              96.16234236489264,
+              18.293581872177942
+            ],
+            [
+              96.16160612931135,
+              18.33871785568882
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_405_2024-10",
+        "cell_id": "40_405",
+        "period": "2024-10",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0026362038664323375,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.1526040322096,
+              18.880330624108154
+            ],
+            [
+              96.20001833687864,
+              18.881051002512283
+            ],
+            [
+              96.20076771535936,
+              18.835916110904137
+            ],
+            [
+              96.15336605906184,
+              18.835197580699734
+            ],
+            [
+              96.1526040322096,
+              18.880330624108154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_417_2024-05",
+        "cell_id": "40_417",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.05,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.1526040322096,
+              18.880330624108154
+            ],
+            [
+              96.20001833687864,
+              18.881051002512283
+            ],
+            [
+              96.20076771535936,
+              18.835916110904137
+            ],
+            [
+              96.15336605906184,
+              18.835197580699734
+            ],
+            [
+              96.1526040322096,
+              18.880330624108154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_417_2024-12",
+        "cell_id": "40_417",
+        "period": "2024-12",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.00243605359317905,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.15030494271906,
+              19.015728261187803
+            ],
+            [
+              96.1977574082309,
+              19.016454189933235
+            ],
+            [
+              96.19851318594839,
+              18.971320042559118
+            ],
+            [
+              96.15107347671635,
+              18.97059596488747
+            ],
+            [
+              96.15030494271906,
+              19.015728261187803
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "40_420_2025-11",
+        "cell_id": "40_420",
+        "period": "2025-11",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0023121387283236996,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.25109751570992,
+              18.65607331963422
+            ],
+            [
+              96.29845313604953,
+              18.656760650361065
+            ],
+            [
+              96.29916695493716,
+              18.611620934647075
+            ],
+            [
+              96.25182380910576,
+              18.61093538568043
+            ],
+            [
+              96.25109751570992,
+              18.65607331963422
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "42_412_2025-05",
+        "cell_id": "42_412",
+        "period": "2025-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.09090909090909091,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.24313755067183,
+              19.142513005993663
+            ],
+            [
+              96.27138030394937,
+              19.107851445153045
+            ],
+            [
+              96.24371966502623,
+              19.107439154193298
+            ],
+            [
+              96.24313755067183,
+              19.142513005993663
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "42_423_2024-05",
+        "cell_id": "42_423",
+        "period": "2024-05",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.001759014951627089,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.30270544626435,
+              18.385918728947214
+            ],
+            [
+              96.34998878511105,
+              18.386583656120244
+            ],
+            [
+              96.35067811649614,
+              18.341440747670894
+            ],
+            [
+              96.30340704114762,
+              18.34077756609288
+            ],
+            [
+              96.30270544626435,
+              18.385918728947214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "43_406_2025-06",
+        "cell_id": "43_406",
+        "period": "2025-06",
+        "season": "wet_May_Oct",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0025951557093425604,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.2933989755284,
+              18.972731825550685
+            ],
+            [
+              96.34084498382191,
+              18.97341952623737
+            ],
+            [
+              96.34156044937228,
+              18.92827976571101
+            ],
+            [
+              96.29412716912775,
+              18.927593822232268
+            ],
+            [
+              96.2933989755284,
+              18.972731825550685
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sample_id": "43_419_2025-03",
+        "cell_id": "43_419",
+        "period": "2025-03",
+        "season": "dry_Nov_Apr",
+        "label": "unknown",
+        "review_status": "pending",
+        "reviewer": "",
+        "review_confidence": "",
+        "reason": "Awaiting independent imagery review",
+        "before_scene": "",
+        "after_scene": "",
+        "before_date": "",
+        "after_date": "",
+        "clear_overlap": "",
+        "resolution_m": "",
+        "imagery_directory": "",
+        "coverage_status": "unavailable",
+        "qualifying_viirs_count": "blinded",
+        "inclusion_probability": 0.0023121387283236996,
+        "schema_version": 2,
+        "aoi": "approximate_bago_yoma_v1",
+        "geometry_crs": "EPSG:4326",
+        "area_crs": "EPSG:32647",
+        "attribution": "NASA FIRMS; Copernicus Sentinel-2 / Earth Search"
+      }
+    }
+  ]
+}

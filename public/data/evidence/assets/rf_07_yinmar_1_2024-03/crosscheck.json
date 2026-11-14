@@ -1,0 +1,1 @@
+{"sample_id": "rf_07_yinmar_1_2024-03", "forest_id": "rf_07_yinmar", "forest_name": "Yinmar Forest Reserve", "burned_area_ha": 392, "mean_dnbr": 0.49, "severity": "High", "viirs_hotspots": 21, "burned_pixels": 9800, "valid_pixels": 62500, "independent_truth": false}

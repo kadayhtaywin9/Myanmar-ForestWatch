@@ -1,0 +1,28 @@
+{
+  "mode": "real",
+  "app_name": "Myanmar ForestWatch",
+  "reserve_count": 10,
+  "record_count": 10284,
+  "qualified_count": 8804,
+  "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "latest_observation": "2026-11-14",
+  "updated_at": "2026-11-14T15:57:15.336636+00:00",
+  "grid_cells": 184,
+  "source": "NASA FIRMS 2012-2026 clipped to 10 Myanmar Reserved Forests"
+}

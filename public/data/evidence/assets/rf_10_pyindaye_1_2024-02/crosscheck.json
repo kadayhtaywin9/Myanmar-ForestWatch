@@ -1,0 +1,1 @@
+{"sample_id": "rf_10_pyindaye_1_2024-02", "forest_id": "rf_10_pyindaye", "forest_name": "Pyindaye Reserved Forest", "burned_area_ha": 205, "mean_dnbr": 0.35, "severity": "Moderate", "viirs_hotspots": 10, "burned_pixels": 5125, "valid_pixels": 62500, "independent_truth": false}

@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "sample_id": "rf_01_panlaung_1_2024-03",
+      "forest_id": "rf_01_panlaung",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_01_panlaung_1_2024-03"
+    },
+    {
+      "sample_id": "rf_01_panlaung_2_2025-02",
+      "forest_id": "rf_01_panlaung",
+      "period": "2025-02",
+      "asset_base": "/data/evidence/assets/rf_01_panlaung_2_2025-02"
+    },
+    {
+      "sample_id": "rf_02_kabaung_1_2024-03",
+      "forest_id": "rf_02_kabaung",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_02_kabaung_1_2024-03"
+    },
+    {
+      "sample_id": "rf_02_kabaung_2_2025-02",
+      "forest_id": "rf_02_kabaung",
+      "period": "2025-02",
+      "asset_base": "/data/evidence/assets/rf_02_kabaung_2_2025-02"
+    },
+    {
+      "sample_id": "rf_03_ngalaik_1_2024-03",
+      "forest_id": "rf_03_ngalaik",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_03_ngalaik_1_2024-03"
+    },
+    {
+      "sample_id": "rf_03_ngalaik_2_2025-03",
+      "forest_id": "rf_03_ngalaik",
+      "period": "2025-03",
+      "asset_base": "/data/evidence/assets/rf_03_ngalaik_2_2025-03"
+    },
+    {
+      "sample_id": "rf_04_yenwe_1_2024-03",
+      "forest_id": "rf_04_yenwe",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_04_yenwe_1_2024-03"
+    },
+    {
+      "sample_id": "rf_04_yenwe_2_2025-02",
+      "forest_id": "rf_04_yenwe",
+      "period": "2025-02",
+      "asset_base": "/data/evidence/assets/rf_04_yenwe_2_2025-02"
+    },
+    {
+      "sample_id": "rf_05_south_zamaye_1_2024-02",
+      "forest_id": "rf_05_south_zamaye",
+      "period": "2024-02",
+      "asset_base": "/data/evidence/assets/rf_05_south_zamaye_1_2024-02"
+    },
+    {
+      "sample_id": "rf_05_south_zamaye_2_2025-03",
+      "forest_id": "rf_05_south_zamaye",
+      "period": "2025-03",
+      "asset_base": "/data/evidence/assets/rf_05_south_zamaye_2_2025-03"
+    },
+    {
+      "sample_id": "rf_06_namhton_1_2024-03",
+      "forest_id": "rf_06_namhton",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_06_namhton_1_2024-03"
+    },
+    {
+      "sample_id": "rf_06_namhton_2_2025-03",
+      "forest_id": "rf_06_namhton",
+      "period": "2025-03",
+      "asset_base": "/data/evidence/assets/rf_06_namhton_2_2025-03"
+    },
+    {
+      "sample_id": "rf_07_yinmar_1_2024-03",
+      "forest_id": "rf_07_yinmar",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_07_yinmar_1_2024-03"
+    },
+    {
+      "sample_id": "rf_07_yinmar_2_2025-02",
+      "forest_id": "rf_07_yinmar",
+      "period": "2025-02",
+      "asset_base": "/data/evidence/assets/rf_07_yinmar_2_2025-02"
+    },
+    {
+      "sample_id": "rf_08_wunbaik_1_2024-02",
+      "forest_id": "rf_08_wunbaik",
+      "period": "2024-02",
+      "asset_base": "/data/evidence/assets/rf_08_wunbaik_1_2024-02"
+    },
+    {
+      "sample_id": "rf_08_wunbaik_2_2025-03",
+      "forest_id": "rf_08_wunbaik",
+      "period": "2025-03",
+      "asset_base": "/data/evidence/assets/rf_08_wunbaik_2_2025-03"
+    },
+    {
+      "sample_id": "rf_09_kadon_kani_1_2024-03",
+      "forest_id": "rf_09_kadon_kani",
+      "period": "2024-03",
+      "asset_base": "/data/evidence/assets/rf_09_kadon_kani_1_2024-03"
+    },
+    {
+      "sample_id": "rf_09_kadon_kani_2_2025-02",
+      "forest_id": "rf_09_kadon_kani",
+      "period": "2025-02",
+      "asset_base": "/data/evidence/assets/rf_09_kadon_kani_2_2025-02"
+    },
+    {
+      "sample_id": "rf_10_pyindaye_1_2024-02",
+      "forest_id": "rf_10_pyindaye",
+      "period": "2024-02",
+      "asset_base": "/data/evidence/assets/rf_10_pyindaye_1_2024-02"
+    },
+    {
+      "sample_id": "rf_10_pyindaye_2_2025-03",
+      "forest_id": "rf_10_pyindaye",
+      "period": "2025-03",
+      "asset_base": "/data/evidence/assets/rf_10_pyindaye_2_2025-03"
+    }
+  ]
+}

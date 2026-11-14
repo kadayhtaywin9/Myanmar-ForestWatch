@@ -1,0 +1,1 @@
+{"sample_id": "rf_06_namhton_1_2024-03", "forest_id": "rf_06_namhton", "forest_name": "Namhton Forest Reserve", "burned_area_ha": 134, "mean_dnbr": 0.29, "severity": "Moderate", "viirs_hotspots": 6, "burned_pixels": 3350, "valid_pixels": 62500, "independent_truth": false}
