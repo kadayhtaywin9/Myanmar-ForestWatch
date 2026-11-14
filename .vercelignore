@@ -1,0 +1,10 @@
+/*
+!/.vercelignore
+!/vercel.json
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/vite.config.ts
+!/index.html
+!/frontend/
+!/public/

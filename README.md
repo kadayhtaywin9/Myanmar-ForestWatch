@@ -108,6 +108,12 @@ The source ZIP contains the fitted model, source, lock files, processed data, te
 
 Read `docs/MODEL_CARD.md`, `docs/METHODOLOGY.md`, `docs/DATA_SOURCES.md`, `docs/ACCEPTANCE.md` and `docs/DEMO_GUIDE.md` before presenting results. Thermal anomalies include agricultural and other heat sources. **Long-term planning projection — not an operational fire warning.**
 
+## Deploy the dashboard on Vercel
+
+Import the repository into Vercel and select the directory containing `vercel.json` and `package.json` as the Root Directory. The configuration selects Vite, installs the locked npm dependencies with `npm ci`, and publishes `dist` after `npm run build`.
+
+The hosted dashboard uses the bundled hotspot records, burn imagery, and risk layers. It needs no environment variables or Python runtime. Keep `public/data` in the repository so Vite can copy it into the build. The Python API and training pipeline run locally using the commands above.
+
 ## Static Cloudflare Pages build
 
 Run `npm ci`, then `npm run build`. Deploy the contents of `dist` as the site root, or unzip the supplied `firewatch-pages-v2.zip` and upload that directory. It contains index.html, assets, data and the downloadable source ZIP. The Python API is local; no Worker or server is required for the static app. Run `python scripts/package_source.py` before building when you want the in-app source download refreshed. Do not upload raw satellite granules, credentials, node_modules or your virtual environment.
