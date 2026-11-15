@@ -88,7 +88,9 @@ function App() {
   const [aoi, setAoi] = useState<any>(null);
   const [reserves, setReserves] = useState<any>(null);
   const [selectedForestId, setSelectedForestId] = useState<string>('all');
-  const [forestQuery, setForestQuery] = useState<string>('');
+  const [forestQuery, setForestQuery] = useState('');
+  const [forestSuggestionsOpen, setForestSuggestionsOpen] = useState(false);
+  const [activeForestSuggestion, setActiveForestSuggestion] = useState(-1);
   const [grid, setGrid] = useState<any>(null);
   const [summary, setSummary] = useState<any>(null);
   const [report, setReport] = useState<any>(null);
@@ -107,7 +109,7 @@ function App() {
   const [selectedModel, setSelectedModel] = useState<string>('XGBoost');
   const [scenario, setScenario] = useState('baseline');
   const horizon = 12;
-  const [lead, setLead] = useState(3);
+  const [lead, setLead] = useState(2);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -227,20 +229,31 @@ function App() {
     return () => window.removeEventListener('keydown', escape);
   }, []);
 
-  const filteredReserves = useMemo(() => {
-    const features = reserves?.features || [];
-    const q = forestQuery.trim().toLowerCase();
-    if (!q) return features;
-    return features.filter(
-      (f: any) =>
-        f.properties.name_en.toLowerCase().includes(q) ||
-        (f.properties.name_mm || '').toLowerCase().includes(q) ||
-        f.properties.region_en.toLowerCase().includes(q) ||
-        (f.properties.region_mm || '').toLowerCase().includes(q) ||
-        (f.properties.township || '').toLowerCase().includes(q) ||
-        (f.properties.township_mm || '').toLowerCase().includes(q)
-    );
-  }, [reserves, forestQuery]);
+  const searchTerms = forestQuery.normalize('NFKC').trim().toLowerCase().split(/\s+/u).filter(Boolean);
+  const isSearchingForests = searchTerms.length > 0;
+  const filteredReserves = (reserves?.features || []).filter(({ properties }: any) => {
+    const searchableText = [
+      getForestName(properties, 'en'),
+      getForestName(properties, 'mm'),
+      getRegionName(properties, 'en'),
+      getRegionName(properties, 'mm'),
+      properties.township,
+      properties.township_mm,
+    ].join(' ').normalize('NFKC').toLowerCase();
+    return searchTerms.every((term) => searchableText.includes(term));
+  });
+  const forestDropdownValue = !isSearchingForests || filteredReserves.some(
+    (forest: any) => forest.properties.forest_id === selectedForestId
+  ) ? selectedForestId : '';
+
+  const showForestSuggestions = forestSuggestionsOpen && isSearchingForests;
+  const activeForestOption = showForestSuggestions ? filteredReserves[activeForestSuggestion] : undefined;
+  useEffect(() => {
+    if (activeForestOption) {
+      document.getElementById(`forest-suggestion-${activeForestOption.properties.forest_id}`)
+        ?.scrollIntoView({ block: 'nearest' });
+    }
+  }, [showForestSuggestions, activeForestSuggestion]);
 
   const forestSamples = useMemo(
     () => samplesForForest(pilot?.samples || [], selectedForestId),
@@ -396,6 +409,9 @@ function App() {
 
   const handleForestSelect = (fid: string) => {
     setSelectedForestId(fid);
+    setForestQuery('');
+    setForestSuggestionsOpen(false);
+    setActiveForestSuggestion(-1);
     setSampleId('');
   };
 
@@ -675,30 +691,84 @@ function App() {
                 className="reserve-search-input"
                 value={forestQuery}
                 onChange={(e) => {
-                  const val = e.target.value;
-                  setForestQuery(val);
-                  const q = val.trim().toLowerCase();
-                  const exact = (reserves?.features || []).find(
-                    (f: any) =>
-                      f.properties.name_en.toLowerCase() === q ||
-                      (f.properties.name_mm || '').toLowerCase() === q
-                  );
-                  if (exact) handleForestSelect(exact.properties.forest_id);
+                  setForestQuery(e.target.value);
+                  setForestSuggestionsOpen(true);
+                  setActiveForestSuggestion(-1);
                 }}
+                onFocus={() => setForestSuggestionsOpen(true)}
+                onBlur={() => {
+                  setForestSuggestionsOpen(false);
+                  setActiveForestSuggestion(-1);
+                }}
+                onKeyDown={(e) => {
+                  if (e.nativeEvent.isComposing || !isSearchingForests) return;
+                  if (e.key === 'Escape' && showForestSuggestions) {
+                    e.preventDefault();
+                    setForestSuggestionsOpen(false);
+                    setActiveForestSuggestion(-1);
+                  } else if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && filteredReserves.length) {
+                    e.preventDefault();
+                    setForestSuggestionsOpen(true);
+                    const last = filteredReserves.length - 1;
+                    setActiveForestSuggestion((index) => e.key === 'ArrowDown'
+                      ? (index >= last ? 0 : index + 1)
+                      : (index <= 0 ? last : index - 1));
+                  } else if (e.key === 'Enter' && showForestSuggestions) {
+                    const match = activeForestOption || (filteredReserves.length === 1 ? filteredReserves[0] : undefined);
+                    if (match) {
+                      e.preventDefault();
+                      handleForestSelect(match.properties.forest_id);
+                    }
+                  }
+                }}
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={showForestSuggestions}
+                aria-controls="forest-suggestions"
+                aria-activedescendant={activeForestOption && `forest-suggestion-${activeForestOption.properties.forest_id}`}
                 placeholder={
                   lang === 'mm'
                     ? 'ကြိုးဝိုင်းသစ်တော ၁၀ ခုနှင့် ပဲခူးရိုးမ ရှာဖွေရန်...'
                     : 'Search 10 Reserved Forests & Bago Yoma...'
                 }
-                aria-label="Search Reserved Forests"
+                aria-label={lang === 'mm' ? 'ကြိုးဝိုင်းသစ်တောများ ရှာရန်' : 'Search Reserved Forests'}
               />
+              {showForestSuggestions && (
+                <ul id="forest-suggestions" className="forest-suggestions" role="listbox" aria-label={lang === 'mm' ? 'ရှာဖွေမှုရလဒ်များ' : 'Forest search results'}>
+                  {filteredReserves.length ? filteredReserves.map(({ properties }: any, index: number) => (
+                    <li
+                      id={`forest-suggestion-${properties.forest_id}`}
+                      key={properties.forest_id}
+                      role="option"
+                      aria-selected={index === activeForestSuggestion}
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => handleForestSelect(properties.forest_id)}
+                    >
+                      {getForestName(properties, lang)}
+                      <small>{getRegionName(properties, lang)}</small>
+                    </li>
+                  )) : (
+                    <li role="option" aria-disabled="true">
+                      {lang === 'mm' ? 'ကိုက်ညီသော သစ်တော မတွေ့ပါ' : 'No matching forests'}
+                    </li>
+                  )}
+                </ul>
+              )}
             </div>
             <select
+              id="reserve-search-results"
               className="reserve-select"
-              value={selectedForestId}
+              value={forestDropdownValue}
               onChange={(e) => handleForestSelect(e.target.value)}
-              aria-label="Select Reserved Forest"
+              aria-label={lang === 'mm' ? 'ကြိုးဝိုင်းသစ်တော ရွေးရန်' : 'Select Reserved Forest'}
             >
+              {isSearchingForests && (
+                <option value="" disabled>
+                  {filteredReserves.length
+                    ? (lang === 'mm' ? 'ရှာဖွေမှုရလဒ်မှ ရွေးပါ' : 'Select a search result')
+                    : (lang === 'mm' ? 'ကိုက်ညီသော သစ်တော မတွေ့ပါ' : 'No matching forests')}
+                </option>
+              )}
               <option value="all">
                 {lang === 'mm'
                   ? 'သစ်တောအားလုံး (ကြိုးဝိုင်းသစ်တော ၁၀ ခု + ပဲခူးရိုးမ)'
@@ -1026,6 +1096,7 @@ function App() {
               initialView={analysis}
               initialLanguage={lang}
               initialTheme={theme}
+              onReturnToMap={() => setAnalysis(null)}
             />
           </AnalysisErrorBoundary>
         </div>

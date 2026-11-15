@@ -215,7 +215,7 @@
   opacity: 0.75;
   pointer-events: none;
 }
-.reserve-search-input {
+.workspace input.reserve-search-input[type=search] {
   width: 100%;
   padding: 9px 12px 9px 32px;
   border-radius: 12px;
@@ -236,10 +236,49 @@
   background: rgba(12, 28, 22, 0.42);
   color: var(--ink);
   font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 [data-theme=light] .reserve-select {
   background: rgba(244, 251, 247, 0.55);
 }
+.workspace .reserve-select option {
+  background: #fff;
+  color: #163b73;
+}
+.workspace .reserve-select option:disabled {
+  color: #526782;
+}
+
+@supports (appearance: base-select) and selector(::picker(select)) {
+  .workspace .reserve-select,
+  .workspace .reserve-select::picker(select) {
+    appearance: base-select;
+  }
+  .workspace .reserve-select::picker(select) {
+    max-height: min(360px, 55dvh);
+    padding: 4px;
+    border: 1px solid #60a5fa;
+    border-radius: 12px;
+    background: #fff;
+    color: #163b73;
+    box-shadow: 0 8px 20px #163b7333;
+  }
+  .workspace .reserve-select option {
+    padding: 8px 10px;
+    border-radius: 7px;
+    white-space: normal;
+  }
+  .workspace .reserve-select option:is(:hover, :focus-visible):not(:disabled) {
+    background: #dbeafe;
+  }
+  .workspace .reserve-select option:checked:not(:disabled) {
+    background: #1d4ed8;
+    color: #fff;
+  }
+}
+
 .drone-3d-card {
   position: relative;
   border-radius: 16px;
@@ -334,4 +373,126 @@
   justify-content: center;
   min-width: 28px;
   min-height: 28px;
+}
+
+@media screen and (min-width: 761px) {
+  .workspace {
+    zoom: 0.75;
+    height: calc(100dvh / 0.75);
+  }
+}
+
+.forest-suggestions {
+  position: absolute;
+  z-index: 2;
+  inset: calc(100% + 5px) 0 auto;
+  max-height: min(250px, 35dvh);
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #142b22;
+  color: var(--ink);
+  box-shadow: 0 8px 20px #0004;
+}
+[data-theme=light] .forest-suggestions {
+  background: #edf6ef;
+}
+.forest-suggestions > li {
+  padding: 9px 10px;
+  border-radius: 8px;
+}
+.forest-suggestions > li:not([aria-disabled]) {
+  cursor: pointer;
+}
+.forest-suggestions > li:not([aria-disabled]):hover,
+.forest-suggestions > [aria-selected=true] {
+  background: var(--control);
+  box-shadow: inset 2px 0 var(--mint);
+}
+.forest-suggestions small {
+  display: block;
+  margin-top: 3px;
+  color: var(--secondary);
+}
+
+.workspace:not(:has(.analysis-overlay)) {
+  --ink: #fff;
+  --secondary: #fff;
+}
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) {
+  --ink: #000;
+  --secondary: #000;
+}
+.workspace:not(:has(.analysis-overlay)) :is(
+  .brand-dot,
+  .summary-foot button,
+  .month-track button.active,
+  .status-label.locked,
+  .risk-number,
+  .evidence-table button
+) {
+  color: var(--ink);
+}
+.workspace:not(:has(.analysis-overlay)) :is(
+  .workspace-modes button.active,
+  .workspace-notice button,
+  .action-button
+) {
+  background: #166b4f;
+  color: var(--ink);
+}
+.workspace:not(:has(.analysis-overlay)) .map-stage :is(
+  .maplibregl-ctrl-attrib, .maplibregl-ctrl-attrib a,
+  .leaflet-control-attribution, .leaflet-control-attribution a,
+  .maplibregl-ctrl-scale
+) {
+  color: var(--ink);
+}
+.workspace:not(:has(.analysis-overlay)) .map-stage .maplibregl-ctrl-scale {
+  background: #102a22bd;
+  border-color: #fff;
+}
+.workspace:not(:has(.analysis-overlay)) .reserve-search-input::placeholder {
+  opacity: 1;
+}
+
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) :is(
+  .workspace-modes button.active,
+  .workspace-notice button,
+  .action-button
+) {
+  background: #a7f3d0;
+}
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) .map-context {
+  color: var(--ink);
+}
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) :is(.context-pill, .context-range) {
+  background: var(--glass-dense);
+}
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) .context-range {
+  padding: 4px 7px;
+  border-radius: 8px;
+  text-shadow: none;
+}
+[data-theme=light] .workspace.solid:not(:has(.analysis-overlay)) .map-stage :is(
+  .maplibregl-ctrl-attrib, .leaflet-control-attribution,
+  .maplibregl-ctrl-scale, .leaflet-control-scale-line
+) {
+  background: var(--glass-dense);
+  color: var(--ink);
+}
+
+.workspace .analysis-overlay .projection-horizon-value {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--control);
+  color: var(--ink);
+  font-size: 12px;
 }

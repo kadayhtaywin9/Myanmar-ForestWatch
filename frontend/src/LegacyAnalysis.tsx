@@ -54,11 +54,13 @@ export default function LegacyAnalysis({
   initialLanguage,
   initialTheme,
   evidenceStatus,
+  onReturnToMap,
 }: {
   initialView?: Key;
   initialLanguage?: string;
   initialTheme?: string;
   evidenceStatus?: string;
+  onReturnToMap: () => void;
 }) {
   const [lang, setLang] = useState(initialLanguage || localStorage.getItem('fw-lang') || 'en');
   const [theme, setTheme] = useState(initialTheme || localStorage.getItem('fw-theme') || 'dark');
@@ -109,7 +111,7 @@ export default function LegacyAnalysis({
   const [daily, DA] = useState(false);
   const [selectedModel, SM] = useState('XGBoost');
   const [scenario, SC] = useState('baseline');
-  const [horizon, HO] = useState(12);
+  const horizon = 12;
   const [lead, LE] = useState(3);
   const [page, PG] = useState(0);
 
@@ -512,11 +514,11 @@ export default function LegacyAnalysis({
     EO(false);
   };
 
-  const heading = (title: Key, sub: Key) => (
+  const heading = (title: Key, sub?: Key) => (
     <div className="page-heading">
       <div className="eyebrow">MYANMAR / 10 RESERVED FORESTS</div>
       <h1>{t(title)}</h1>
-      <p>{t(sub)}</p>
+      {sub && <p>{t(sub)}</p>}
     </div>
   );
 
@@ -831,7 +833,7 @@ export default function LegacyAnalysis({
           ))}
         </nav>
         <div className="sidebar-bottom">
-          <Mountain size={29} />
+          <img className="sidebar-logo" src="/masa-logo.png" width={48} height={48} alt="MASA logo" />
           <strong>NASA SPACE APPS</strong>
           <p>2026 CHALLENGE</p>
           <span>
@@ -852,7 +854,9 @@ export default function LegacyAnalysis({
             <button className="mobile-menu icon-button" onClick={() => setMobileNav(!mobileNav)} aria-label={t('workspace')}>
               <Menu size={22} />
             </button>
-            <span>{t('brandSub')}</span>
+            <button type="button" className="breadcrumb-map" onClick={onReturnToMap}>
+              {t('brandSub')}
+            </button>
             <ChevronRight size={13} />
             <strong>{t(view)}</strong>
           </div>
@@ -930,7 +934,7 @@ export default function LegacyAnalysis({
               <button onClick={restore}>{t('restore')}</button>
             </div>
           )}
-          {(view === 'overview' || view === 'quality') && evidenceStatus && (
+          {view === 'quality' && evidenceStatus && (
             <div className="alert neutral">
               <Info size={18} />
               {evidenceStatus}
@@ -1206,11 +1210,7 @@ export default function LegacyAnalysis({
 
           {view === 'future' && (
             <>
-              {heading('outlook', 'outlookSub')}
-              <div className="alert">
-                <Info size={18} />
-                {t('warning')}
-              </div>
+              {heading('outlookSub')}
               {enabled && report && risks.length > 0 ? (
                 <>
                   <div className="projection-controls">
@@ -1232,18 +1232,10 @@ export default function LegacyAnalysis({
                         )}
                       </select>
                     </label>
-                    <label>
+                    <div className="projection-horizon">
                       {t('horizon')}
-                      <select
-                        value={horizon}
-                        onChange={(e) => {
-                          HO(Number(e.target.value));
-                          LE(Math.min(lead, Number(e.target.value)));
-                        }}
-                      >
-                        <option value={12}>12 {t('months')}</option>
-                      </select>
-                    </label>
+                      <span className="projection-horizon-value">{horizon} {t('months')}</span>
+                    </div>
                     <label>
                       {t('scenario')}
                       <select
@@ -1334,10 +1326,6 @@ export default function LegacyAnalysis({
           {view === 'quality' && report && (
             <>
               {heading('qualityTitle', 'qualitySub')}
-              <div className="alert neutral">
-                <Info size={18} />
-                {t('metricsNote')}
-              </div>
               {activeQualityTest && (
                 <div className="stats">
                   {(['accuracy', 'f1', 'pr_auc', 'brier'] as const).map((k) => (
@@ -1580,7 +1568,7 @@ export default function LegacyAnalysis({
 
           {view === 'about' && (
             <>
-              {heading('aboutTitle', 'aboutSub')}
+              {heading('aboutSub')}
               <div className="method-grid">
                 {[1, 2, 3, 4].map((i) => (
                   <section className="panel padded" key={i}>
@@ -1589,10 +1577,6 @@ export default function LegacyAnalysis({
                     <p>{t(`method${i}Text` as Key)}</p>
                   </section>
                 ))}
-              </div>
-              <div className="alert">
-                <Info size={20} />
-                {t('caveat')}
               </div>
               <section className="panel padded">
                 <h3>{t('dataset')}</h3>

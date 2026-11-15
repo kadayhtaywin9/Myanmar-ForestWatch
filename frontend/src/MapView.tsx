@@ -9,6 +9,23 @@ import { getForestName, getRegionName } from './reserves-i18n';
 const empty: any = { type: 'FeatureCollection', features: [] };
 const palette = ['#f3e6b3', '#e6c579', '#d99b58', '#bd6a45', '#8f3d36'];
 
+const BASEMAP_TILES: Record<string, string[]> = {
+  satellite: [
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  ],
+  satelliteFallback: [
+    'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  ],
+  terrain: [
+    'https://a.tile.opentopomap.org/{z}/{x}/{y}.png',
+    'https://b.tile.opentopomap.org/{z}/{x}/{y}.png',
+  ],
+  simple: [
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  ],
+};
+
 export function MapView(props: any) {
   const {
     rows,
@@ -82,9 +99,9 @@ export function MapView(props: any) {
       m.on('load', () => {
         m.addSource('base', {
           type: 'raster',
-          tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+          tiles: BASEMAP_TILES.satellite,
           tileSize: 256,
-          attribution: '© Esri / Maxar · Myanmar Biodiversity Protected Areas',
+          attribution: '© Esri / Maxar · OpenStreetMap · Myanmar Biodiversity Protected Areas',
         });
         m.addLayer({
           id: 'base',
@@ -236,7 +253,6 @@ export function MapView(props: any) {
           layout: { 'icon-image': 'diamond', 'icon-size': 0.55, 'icon-allow-overlap': true },
         });
 
-        // Animated Click Pulse Beacon Layers
         m.addLayer({
           id: 'click-pulse-outer',
           type: 'circle',
@@ -340,8 +356,33 @@ export function MapView(props: any) {
         }
       });
 
+      let tileFailCount = 0;
+      m.on('sourcedata', (e: any) => {
+        if (e.sourceId === 'base' && e.isSourceLoaded) {
+          tileFailCount = 0;
+          setError(false);
+        }
+      });
+
+      m.on('error', (e: any) => {
+        const msg = String(e?.error?.message || '');
+        if (msg.includes('AbortError') || msg.includes('aborted')) return;
+
+        if (e?.sourceId === 'base') {
+          tileFailCount += 1;
+          const baseSrc = m.getSource('base') as maplibregl.RasterTileSource | undefined;
+          if (tileFailCount >= 3 && latest.current.basemap === 'satellite' && baseSrc) {
+            baseSrc.setTiles(BASEMAP_TILES.satelliteFallback);
+            setError(false);
+            return;
+          }
+          if (tileFailCount >= 4) {
+            setError(true);
+          }
+        }
+      });
+
       m.on('webglcontextlost', () => setFallback(true));
-      m.on('error', () => setError(true));
     } catch {
       el.current.innerHTML = '';
       const m = L.map(el.current, { zoomControl: false, preferCanvas: false, minZoom: 4, maxZoom: 16 }).setView([20.45, 96.05], 6);
@@ -365,7 +406,6 @@ export function MapView(props: any) {
     };
   }, []);
 
-  // Update map label language dynamically when lang toggles between EN and MM
   useEffect(() => {
     if (!ready || fallback || !gl.current) return;
     const m = gl.current;
@@ -383,7 +423,6 @@ export function MapView(props: any) {
     ]);
   }, [ready, fallback, lang]);
 
-  // Animate pulsing click beacon when a point is clicked for visualization
   useEffect(() => {
     if (!ready) return;
     if (pulseRaf.current) {
@@ -439,18 +478,28 @@ export function MapView(props: any) {
   useEffect(() => {
     if (!ready) return;
     setError(false);
-    const url =
-      basemap === 'satellite'
-        ? 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-        : basemap === 'terrain'
-          ? 'https://a.tile.opentopomap.org/{z}/{x}/{y}.png'
-          : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tiles = BASEMAP_TILES[basemap] || BASEMAP_TILES.simple;
     if (fallback && leaf.current) {
       if (base.current) leaf.current.removeLayer(base.current);
-      base.current = L.tileLayer(url, { maxZoom: 16 }).addTo(leaf.current);
-      base.current.on('tileerror', () => setError(true));
+      let leafErrors = 0;
+      const layer = L.tileLayer(tiles[0], { maxZoom: 16 }).addTo(leaf.current);
+      layer.on('load', () => {
+        leafErrors = 0;
+        setError(false);
+      });
+      layer.on('tileerror', () => {
+        leafErrors += 1;
+        if (leafErrors >= 3 && basemap === 'satellite' && leaf.current) {
+          leaf.current.removeLayer(layer);
+          base.current = L.tileLayer(BASEMAP_TILES.satelliteFallback[0], { maxZoom: 16 }).addTo(leaf.current);
+          setError(false);
+        } else if (leafErrors >= 4) {
+          setError(true);
+        }
+      });
+      base.current = layer;
     } else if (gl.current) {
-      (gl.current.getSource('base') as maplibregl.RasterTileSource | undefined)?.setTiles([url]);
+      (gl.current.getSource('base') as maplibregl.RasterTileSource | undefined)?.setTiles(tiles);
     }
   }, [ready, fallback, basemap]);
 
@@ -620,7 +669,6 @@ export function MapView(props: any) {
     }
   }, [ready, fallback, rows, aoi, reserves, selectedForestId, admin, grid, risk, showGrid, showDensity, zoom, labelsOn, draw, activity, cuts, evidenceCells, candidates, focusGeometry, showCoverage, lang, activePulse?.seq]);
 
-  // Fly to selected Reserved Forest / Bago Yoma AOI when user searches or selects one
   useEffect(() => {
     if (!ready || !reserves) return;
     if (!selectedForestId || selectedForestId === 'all') {
